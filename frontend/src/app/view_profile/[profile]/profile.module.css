@@ -1,0 +1,157 @@
+.container {
+  padding: 24px;
+  background: #f3f2ef;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* COVER + AVATAR */
+
+.backdropContainer{
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    background-image: url("https://images.pexels.com/photos/2527248/pexels-photo-2527248.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* NEW */
+.profilePhotoWrapper{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    position: relative;
+    margin-top: -105px;   /* half overlap */
+    margin-left: 40px;
+    background: white;
+}
+
+.profilePhotoWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DETAILS SECTION */
+
+.postContainer_details {
+  /* margin-top: 70px; */
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.postContainer_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* LEFT PROFILE INFO */
+
+.postContainer_flex h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.postContainer_flex p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* BUTTONS */
+
+.connectBtn {
+  padding: 8px 18px;
+  background: #0a66c2;
+  border: none;
+  color: #fff;
+  border-radius: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.connectBtn:hover {
+  background: #004182;
+}
+
+.connectedButton {
+  padding: 8px 18px;
+  border-radius: 22px;
+  border: 1.5px solid #0a66c2;
+  color: #0a66c2;
+  font-weight: 600;
+  background: #fff;
+}
+
+/* RIGHT RECENT ACTIVITY */
+
+.card_profileContainer {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.card_profileContainer img {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card_profileContainer p {
+  font-size: 13px;
+  color: #444;
+}
+
+/* WORK HISTORY */
+
+.workHistoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.workHistoryCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 22px;
+  border: 1px solid #e0dfdc;
+  min-width: 240px;
+  transition: 0.2s ease;
+}
+
+.workHistoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .postContainer_flex {
+    flex-direction: column;
+  }
+
+  .backdropContainer img {
+    width: 120px;
+    height: 120px;
+    bottom: -50px;
+  }
+
+  .postContainer_details {
+    margin-top: 60px;
+  }
+}

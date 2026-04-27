@@ -1,0 +1,151 @@
+.wrapper {
+  padding: 24px 0;
+  background: #f3f2ef;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 820px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.postBtn {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.jobInfo {
+  flex: 1;
+}
+
+.jobTitle {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.company {
+  font-size: 14px;
+  color: #555;
+  margin-top: 3px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.badges {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #eef3f8;
+  color: #0a66c2;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.viewBtn {
+  background: white;
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    font-size: 16px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 16px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* Card stack ho jaye */
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* View Applicants button full width */
+    .viewBtn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .jobTitle {
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}

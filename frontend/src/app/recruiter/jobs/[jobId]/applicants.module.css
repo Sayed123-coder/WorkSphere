@@ -1,0 +1,159 @@
+.page {
+  padding: 30px;
+  background: #f3f2ef;
+  min-height: 100vh;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+}
+
+.email {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.status {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0a66c2;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.shortlist {
+  background-color: #0a66c2;
+  color: white;
+}
+
+.reject {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.empty {
+  color: #888;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.applied {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.shortlisted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.downloadBtn {
+  background: white;
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 16px;
+    }
+
+    .sectionTitle {
+        font-size: 18px;
+    }
+
+    /* Card stack ho jaye */
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Buttons full width */
+    .actions {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .btn {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+    }
+}

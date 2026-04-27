@@ -1,0 +1,447 @@
+.container {
+    padding: 20px;
+    background: #f3f2ef;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.profileHeaderCard {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.backdropContainer {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.backdropContainer img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -75px;
+    left: 25px;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.backdrop_Overlay {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -75px;
+    left: 25px;
+    z-index: 4;
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.backdrop_Overlay:hover { opacity: 1; }
+
+.postContainer_details {
+    padding: 85px 25px 25px 25px;
+}
+
+.mainInfoWrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.leftInfo { flex: 0.7; }
+
+.rightActivity {
+    flex: 0.3;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+}
+
+.nameSection { margin-bottom: 10px; }
+
+.nameEdit {
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 100%;
+}
+
+.usernameText {
+    color: #666;
+    margin-top: -5px;
+}
+
+.coverEditBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 5;
+}
+
+.coverEditBtn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.bioContainer { margin: 15px 0; }
+
+.bioTextarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.5;
+    resize: none;
+    font-family: inherit;
+}
+
+.activityTitle { font-size: 1.1rem; margin-bottom: 15px; }
+
+.miniPostCard {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.activityImg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.emptyImg {
+    width: 50px;
+    height: 50px;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.miniPostBody { font-size: 0.85rem; color: #555; }
+
+.viewAllBtn {
+    margin-top: 12px;
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
+    color: #0a66c2;
+    border: 1px solid #0a66c2;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.viewAllBtn:hover {
+    background: #e8f0fb;
+}
+
+/* Sections */
+.sectionCard {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.sectionTitle { font-size: 1.2rem; margin-bottom: 15px; }
+
+.workHistoryContainer { display: flex; flex-direction: column; gap: 1rem; }
+
+.workHistoryCard {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Buttons */
+.updateProfileBtn {
+    background: #0a66c2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.updateProfileBtn:hover {
+    background: #085099;
+}
+
+.addWorkButton {
+    background: white;
+    color: #0a66c2;
+    border: 1px solid #0a66c2;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addWorkButton:hover {
+    background: #e8f0fb;
+}
+
+/* Modal */
+.commentsContainer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.allCommentsContainer {
+    background: white;
+    width: 420px;
+    padding: 28px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modalTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #111;
+}
+
+.inputField {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border 0.2s;
+}
+
+.inputField:focus {
+    border-color: #0a66c2;
+}
+
+/* Input looking like text */
+.inputLikeText {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-family: inherit;
+    box-sizing: border-box;
+    max-width: 100%;
+    resize: none;
+}
+
+/* Education */
+/* --- New Education Styling --- */
+
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.educationCardEditable {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.educationCardEditable:hover {
+    background: #fcfcfc;
+}
+
+/* Base input styling for education fields */
+.eduInput {
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    resize: none;
+}
+
+.eduInput:hover, .eduInput:focus {
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.eduInput:focus {
+    border-color: #0a66c2;
+    outline: none;
+}
+
+/* Specific styling for the hierarchy */
+.schoolTitle {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #111;
+}
+
+.degreeText {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.fieldOfStudyText {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+/* Experience improved */
+.workCompany {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.workYears {
+    color: grey;
+    font-size: 0.9rem;
+}
+
+/* Floating Save Bar */
+.floatingSaveBar {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    z-index: 200;
+}
+
+.floatingSaveBtn {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.floatingSaveBtn:hover {
+    transform: translateY(-2px);
+    background: #085099;
+}
+
+@media (max-width: 768px) {
+
+    /* Name aur Recent Activity — upar neeche */
+    .mainInfoWrapper {
+        flex-direction: column;
+    }
+
+    .rightActivity {
+        border-left: none;
+        border-top: 1px solid #eee;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    /* Name cut off ho raha tha */
+    .nameEdit {
+        font-size: 1.3rem;
+    }
+
+    /* Current Position cut off fix */
+     .inputLikeText {
+     width: 100%;
+     box-sizing: border-box;
+     white-space: normal;
+     word-break: break-word;
+     overflow: visible;
+    }
+
+    /* Education ka  cut off fix */
+  .eduInput {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-word;
+    overflow: visible;
+}
+
+.sectionCard {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+    /* Modal mobile pe full width */
+    .allCommentsContainer {
+        width: 90%;
+    }
+
+    /* Profile picture thodi choti */
+    .backdropContainer img {
+        width: 110px;
+        height: 110px;
+        bottom: -55px;
+    }
+
+    .backdrop_Overlay {
+        width: 110px;
+        height: 110px;
+        bottom: -55px;
+    }
+
+    .postContainer_details {
+        padding: 65px 15px 20px 15px;
+    }
+
+    .schoolTitle {
+        white-space: normal;
+        word-break: break-word;
+        font-size: 0.95rem;
+    }
+
+    .degreeText {
+        font-size: 0.88rem;
+    }
+
+    .fieldOfStudyText {
+        font-size: 0.82rem;
+    }
+}

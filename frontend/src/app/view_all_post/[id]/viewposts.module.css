@@ -1,0 +1,148 @@
+.container {
+  padding: 20px;
+  background: #f3f2ef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Header */
+.pageHeader {
+  background: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.backBtn {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 7px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  transition: 0.2s;
+}
+
+.backBtn:hover {
+  background: #f0f0f0;
+}
+
+.ownerInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.ownerAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ownerName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ownerUsername {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.postCount {
+  color: #0a66c2;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Post Card — same as dashboard */
+.postCard {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatarSmall {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userMeta { flex: 1; }
+.userMeta h4 { margin: 0; font-size: 0.95rem; }
+.userMeta span { color: #666; font-size: 0.82rem; }
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.postText {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.imageContainer { margin-bottom: 12px; }
+
+.postImage {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.postFooter {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.footerBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: #555;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.footerBtn:hover { background: #f3f2ef; }
+
+/* States */
+.loadingText, .emptyText {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  font-size: 1rem;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}

@@ -1,0 +1,183 @@
+/* ===== GLOBAL LAYOUT BACKGROUND ===== */
+
+.homeContainer {
+  display: grid;
+  grid-template-columns: 220px 640px 300px;
+  justify-content: center;
+  gap: 28px;
+  padding: 32px 24px;
+  background: #f3f2ef;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+}
+
+/* ===== LEFT SIDEBAR (LinkedIn style card) ===== */
+
+.homeContainer_left {
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e0dfdc;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sideBarOptions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.sideBarOptions:hover {
+  background: #eef3f8;
+}
+
+.sideBarOptions svg {
+  height: 22px;
+  width: 22px;
+}
+
+/* ===== CENTER FEED ===== */
+
+.homeConatiner_feedConatiner {
+  width: 100%;
+}
+
+.homeConatiner_feedConatiner > * {
+  margin-bottom: 16px;
+}
+
+/* ===== RIGHT PANEL ===== */
+
+.homeContainer_extraContainer {
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+  background: white;
+  border: 1px solid #e0dfdc;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.homeContainer_extraContainer h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.extraContainer_profiles {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.extraContainer_profiles:hover {
+  background: #eef3f8;
+}
+
+/* ===== MOBILE NAVBAR ===== */
+
+.mobileNavbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+}
+
+.mobileNavbar svg {
+  height: 26px;
+  width: 26px;
+}
+
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+}
+
+.drawer {
+  width: 100%;
+  background: white;
+  border-radius: 16px 16px 0 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drawerItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  transition: 0.2s;
+}
+
+.drawerItem:hover {
+  background: #f3f2ef;
+}
+
+.drawerItem svg {
+  height: 22px;
+  width: 22px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1200px) {
+  .homeContainer {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .homeContainer_extraContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    display: block;
+    padding: 16px;
+  }
+
+  .homeContainer_left {
+    display: none;
+  }
+
+  .homeConatiner_feedConatiner {
+    padding-bottom: 90px;
+  }
+
+  .mobileNavbar {
+    display: flex;
+  }
+}

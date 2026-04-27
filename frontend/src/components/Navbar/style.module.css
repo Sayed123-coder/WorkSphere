@@ -1,0 +1,46 @@
+.container{
+    padding: 1.2rem;
+}
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBarOptionContainer{
+    display: flex;
+}
+
+.navBar h2{
+    font-weight:700;
+  font-size:25px;
+  letter-spacing:0.5px;
+}
+
+.buttonJoin{
+  background: #0a66c2;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.8rem 1rem;
+    }
+
+    .navBarOptionContainer {
+        display: none; /* mobile pe top navbar hide — bottom navbar hai na */
+    }
+
+    .navBar h2 {
+        font-size: 20px;
+    }
+}
