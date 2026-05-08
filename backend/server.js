@@ -9,7 +9,7 @@ import userRoutes from "./routes/user.routes.js"
 import jobRoutes from "./routes/job.routes.js";
 import applicationRoutes from "./routes/application.routes.js";
 
-
+const PORT=process.env.PORT || 9000;
 const app=express();
 
 app.use(cors());
@@ -24,7 +24,7 @@ const start=async ()=>{
     const connectDB=await mongoose.connect(process.env.DB_URL);
     console.log("MongoDB Connected");
 
-  app.listen(9000,()=>{
+  app.listen(PORT,()=>{
     console.log("App is listening on the server");
   })
 }
