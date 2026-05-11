@@ -12,14 +12,42 @@ import applicationRoutes from "./routes/application.routes.js";
 const PORT=process.env.PORT || 9000;
 const app=express();
 
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",          
+  "http://localhost:3000",          
+  "https://work-sphere-lemon.vercel.app", ];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+
+      if (
+        allowedOrigins.includes(origin) ||
+        origin.endsWith(".vercel.app")
+      ) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("CORS not allowed"));
+    },
+    credentials: true,
+  })
+);
+
+app.options("*", cors());
 app.use(express.json());
+app.use(express.static("uploads"));
+
+app.get("/", (req, res) => {
+  res.status(200).send("API is running...");
+});
 
 app.use(postRoutes);
 app.use(userRoutes);
 app.use("/job",jobRoutes);
 app.use("/application",applicationRoutes);
-app.use(express.static("uploads"));
+
 const start=async ()=>{
     const connectDB=await mongoose.connect(process.env.DB_URL);
     console.log("MongoDB Connected");
